@@ -245,7 +245,7 @@ test('login as diner and view pages', async ({ page }) => {
 	await page.getByRole('link', { name: 's', exact: true }).click();
 });
 
-test('view admin dashboard and create franchise', async ({ page }) => {
+test('view admin dashboard and create franchise ', async ({ page }) => {
 	await page.route('*/**/api/auth', async (route) => {
 		const registerReq = { email: 'a@jwt.com', password: 'admin' };
 		const registerRes = {
